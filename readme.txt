@@ -6,3 +6,12 @@
    - git add nome.txt
 5 - git commit -m "Comentario" = Commita somente
    - git commit - a -m "comentario" = Commita e adiciona os arquivos
+   - git commit --amend -m "comentario (edicao)" = pega o ultimo commit e adiciona os arquivos que faltaram
+6 - git diff = Ve modificações realizadas no diretorio de trabalho
+   - git diff --staged = Ve modificações realizadas que já foram adicionadas na stage area
+7 - git log = ver os comits que foram feitos
+   - git log -p = log em ordem decrescente com paginacao
+   - git log -p -1 = por quantidade de comit
+   - git log --pretty=online
+8 - gitk - abre programa para ver os commit de forma visual
+   
