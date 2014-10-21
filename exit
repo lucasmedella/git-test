@@ -1,0 +1,47 @@
+[33mcommit ef0e112715c5091bd34fd980f2f8f4b8281c3b21[m
+Author: Lucas Medella <lucasmails@gmail.com>
+Date:   Mon Oct 20 21:51:24 2014 -0200
+
+    4 alteracao
+
+[1mdiff --git a/readme.txt b/readme.txt[m
+[1mindex 7311f0f..d84afc1 100644[m
+[1m--- a/readme.txt[m
+[1m+++ b/readme.txt[m
+[36m@@ -1 +1,8 @@[m
+[31m-sdfasdasdfa DFASDS[m
+\ No newline at end of file[m
+[32m+[m[32m1 - Criar pasta do projeto[m
+[32m+[m[32m2 - git init criar o repositorio[m
+[32m+[m[32m3 - Adicionar os arquivos[m
+[32m+[m[32m4 - git add . = adiciona todos os arquivos[m
+[32m+[m[32m   - git add *.php[m
+[32m+[m[32m   - git add nome.txt[m
+[32m+[m[32m5 - git commit -m "Comentario" = Commita somente[m
+[32m+[m[32m   - git commit - a -m "comentario" = Commita e adiciona os arquivos[m
+\ No newline at end of file[m
+
+[33mcommit 3022ab01ee56da182ce8611f82cd76905613d093[m
+Author: Lucas Medella <lucasmails@gmail.com>
+Date:   Mon Oct 20 21:47:47 2014 -0200
+
+    3 alteracao
+
+[1mdiff --git a/changelog.txt b/changelog.txt[m
+[1mindex 668d0fd..0e1c4ed 100644[m
+[1m--- a/changelog.txt[m
+[1m+++ b/changelog.txt[m
+[36m@@ -1 +1 @@[m
+[31m-svcsz[m
+\ No newline at end of file[m
+[32m+[m[32msvcszf asdfsd[m
+\ No newline at end of file[m
+[1mdiff --git a/readme.txt b/readme.txt[m
+[1mindex 820bd74..7311f0f 100644[m
+[1m--- a/readme.txt[m
+[1m+++ b/readme.txt[m
+[36m@@ -1 +1 @@[m
+[31m-sdfasd[m
+\ No newline at end of file[m
+[32m+[m[32msdfasdasdfa DFASDS[m
+\ No newline at end of file[m
