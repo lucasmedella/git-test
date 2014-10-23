@@ -19,4 +19,5 @@
 11 - git tag = exibe as tags crias
      - git tag -a codigodocommit -m "Descricao" = definindo uma tag para commit ja realizado
 	 - git tag -a v1.0 -m "comentario" = criando uma tag sem vinculacao
+	 - git show v.1.0 = ve os dados e o commit vinculado a tag
    
