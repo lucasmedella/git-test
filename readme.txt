@@ -14,5 +14,5 @@
    - git log -p -1 = por quantidade de comit
    - git log --pretty=online
 8 - gitk - abre programa para ver os commit de forma visual
-9
+9 - git reset HEAD nome.html = leva o arquivo da stage area para work area.
    
