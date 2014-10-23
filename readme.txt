@@ -15,4 +15,5 @@
    - git log --pretty=online
 8 - gitk - abre programa para ver os commit de forma visual
 9 - git reset HEAD nome.html = leva o arquivo da stage area para work area.
+10 - git rm nome.txt = remove arquivo 
    

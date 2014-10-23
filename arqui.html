@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+
+<!--[if gt IE 8]><!--> <html class="no-js" lang="pt-BR" prefix="og: http://ogp.me/ns#"> <!--<![endif]-->
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Vi Solutions | Adobe Brackets - Editor de texto no estilo Sublime Text</title>
+
+
+    <link rel="stylesheet" href="http://visolutions.com.br/wp-content/themes/disillusion/uniquecss.css" type="text/css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900,900italic">
+
+
+    <link rel="shortcut icon" href="http://www.visolutions.com.br/wp-content/uploads/2013/08/vi-icon.png">
+
+
+    <style>
+        
+
+        .text-color, a.link-big:hover, .navbar .nav > li > a:hover, .navbar .nav li.dropdown.open > .dropdown-toggle, .navbar .nav li.dropdown.open.active > .dropdown-toggle, .portfolio-image:after, .blog-post h3 a:hover, footer .tweet_list .tweet_text a , .nav-pills > li > a:hover, .accordion-heading a, .home-header .link:hover 
+
+        { color: #fb8047; }
+
+
+
+        .navbar .nav > li > a:hover:before, .navbar .nav > li.active > a:before, .navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus, .navbar .nav li.dropdown.active > .dropdown-toggle, .portfolio-item-detail a.close:hover, .blog-item-detail a.close:hover, .client-testimonials .client:hover:before, .bx-controls-direction a, .slideshow-left-nav a, .flex-direction-nav a, .contact-form button:hover, #commentform #submit:hover, .nav-pills > li.active > a,.nav-pills > li.active > a:hover, .btn-solid, .btn-solid:hover, .btn-solid:link, .btn-solid:visited, .btn-solid:active
+
+        { background: #fb8047; }
+
+
+
+        header .dropdown-menu
+
+        { background-color: #fb8047; }
+
+
+
+        .navbar .nav > li > .dropdown-menu:after
+
+        { border-bottom: 7px solid #fb8047; }
+
+
+
+        .contact-form button, #commentform #submit, .nav-pills > li > a:hover, .nav-pills > li.active > a,.nav-pills > li.active > a:hover
+
+        { border: 1px solid #fb8047; }
+
+
+
+        .base_color { background-color: #fb8047; }
+
+
+
+        header.navbar-fixed-top, header.navbar-fixed-bottom {position: fixed;}
+
+
+        h1 { font-size: 40px; font-family: "Open Sans"; }
+        h2 { font-size: 57px; font-family: "Open Sans"; }
+        h3 { font-size: 20px; font-family: "Open Sans"; }
+        h4 { font-size: 18px; font-family: "Open Sans"; }
+        h5 { font-size: 16px; font-family: "Open Sans"; }
+        h6 { font-size: 13px; font-family: "Open Sans"; }
+        body { font-size: 14px; font-family: "Open Sans"; }
+        .navbar .nav > li > a { font-size: 21px; font-family: "Open Sans"; }
+        footer { font-size: 14px; font-family: "Open Sans"; }
+
+
+        .fontFlake{
+            position:absolute;
+            top:-50px;
+            left:0px;
+            z-index:10;
+            display:block;
+        }
+img{border:1px solid red;}
+    </style>
+
+    <!-- This site is optimized with the Yoast WordPress SEO plugin v1.5.2.5 - http://yoast.com/wordpress/seo/ -->
+    <meta name="description" content="Brackets é o novo brinquedo que a Adobe está criando para desenvolvedores Web. Possui o estilo do Sublime Text e promete ser mais rápido e revolucionario."/>
+    <link rel="canonical" href="http://visolutions.com.br/adobe-brackets/" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Vi Solutions | Adobe Brackets - Editor de texto no estilo Sublime Text" />
+    <meta property="og:description" content="Brackets é o novo brinquedo que a Adobe está criando para desenvolvedores Web. Possui o estilo do Sublime Text e promete ser mais rápido e revolucionario." />
+    <meta property="og:url" content="http://visolutions.com.br/adobe-brackets/" />
+    <meta property="article:author" content="daniellealdosantos" />
+    <meta property="article:tag" content="adobe brackets" />
+    <meta property="article:tag" content="adobe editor de texto" />
+    <meta property="article:tag" content="alternativa para sublime text" />
+    <meta property="article:tag" content="brackets adobe" />
+    <meta property="article:tag" content="editor de texto estilo sublime text" />
+    <meta property="article:tag" content="editores de texto" />
+    <meta property="article:tag" content="sublime text alternative" />
+    <meta property="article:section" content="Blog" />
+    <meta property="article:section" content="Daniel" />
+    <meta property="article:published_time" content="2013-08-15T11:22:55+00:00" />
+    <meta property="article:modified_time" content="2013-08-15T12:15:51+00:00" />
+    <meta property="og:updated_time" content="2013-08-15T12:15:51+00:00" />
+    <meta property="og:image" content="http://visolutions.com.br/wp-content/uploads/2013/08/adobe-brackets.jpg" />
+    <meta property="og:image" content="http://www.visolutions.com.br/wp-content/uploads/2013/08/brackets-primeira-impressao.jpg" />
+    <!-- / Yoast WordPress SEO plugin. -->
+
+    <link rel="alternate" type="application/rss+xml" title="Feed de  &raquo;" href="http://visolutions.com.br/feed/" />
+    <link rel="alternate" type="application/rss+xml" title=" &raquo;  Feed de comentários" href="http://visolutions.com.br/comments/feed/" />
+
+    <link rel='stylesheet' id='ssbaFont-css'  href='http://fonts.googleapis.com/css?family=Indie+Flower&#038;ver=3.9.1' type='text/css' media='all' />
+    <link rel='stylesheet' id='ssba-page-styles-css'  href='http://visolutions.com.br/wp-content/plugins/simple-share-buttons-adder/css/page-style.css?ver=3.9.1' type='text/css' media='all' />
+    <link rel='stylesheet' id='Open Sans:300,300italic,regular,italic,600,600italic,700,700italic,800,800italic-css'  href='http://fonts.googleapis.com/css?family=Open+Sans%3A300%2C300italic%2Cregular%2Citalic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic&#038;ver=3.9.1' type='text/css' media='all' />
+    <link rel='stylesheet' id='pt-mediaqueries-css'  href='http://visolutions.com.br/wp-content/themes/disillusion/css/mediaqueries.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='wp-pagenavi-css'  href='http://visolutions.com.br/wp-content/plugins/wp-pagenavi/pagenavi-css.css?ver=2.70' type='text/css' media='all' />
+    <script type="text/javascript" src="https://apis.google.com/js/plusone.js">{lang: "pt-BR"}</script><script type='text/javascript' src='http://visolutions.com.br/wp-content/themes/disillusion/js/jquery.min.js'></script>
+    <script type='text/javascript' src='http://visolutions.com.br/wp-content/plugins/scroll-to-top/js/stt.js?ver=1.0'></script>
+    <script type='text/javascript' src='http://visolutions.com.br/wp-content/themes/disillusion/js/vendor/modernizr-2.6.2.min.js'></script>
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://visolutions.com.br/xmlrpc.php?rsd" />
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://visolutions.com.br/wp-includes/wlwmanifest.xml" /> 
+    <meta name="generator" content="WordPress 3.9.1" />
+    <link rel='shortlink' href='http://visolutions.com.br/?p=2762' />
+
+    <!-- by Scrollto Top -->
+
+    <script type="text/javascript">
+        //<![CDATA[
+        jQuery(document).ready(function(){
+            jQuery("body").append("<div id=\"scroll_to_top\"><a href=\"#top\">Voltar ao topo</a></div>");
+            jQuery("#scroll_to_top a").css({	'display' : 'none', 'z-index' : '9', 'position' : 'fixed', 'top' : '100%', 'width' : '110px', 'margin-top' : '-30px', 'right' : '50%', 'margin-left' : '-50px', 'height' : '20px', 'padding' : '3px 5px', 'font-size' : '14px', 'text-align' : 'center', 'padding' : '3px', 'color' : '#FFFFFF', 'background-color' : '#222222', '-moz-border-radius' : '5px', '-khtml-border-radius' : '5px', '-webkit-border-radius' : '5px', 'opacity' : '.8', 'text-decoration' : 'none'});	
+            jQuery('#scroll_to_top a').click(function(){
+                jQuery('html, body').animate({scrollTop:0}, 'slow');
+            });
+
+        });
+
+        //]]>
+
+    </script>
+    <!-- /by Scrollto Top and History Back -->	
+
+    <style type="text/css">	#ssba {
+
+
+
+
+    }
+        #ssba img		
+        { 	
+            width: 35px !important;
+            padding: 6px;
+            border:  0;
+            box-shadow: none !important;
+            display: inline;
+            vertical-align: middle;
+        }
+        #ssba, #ssba a		
+        {
+            background: none;
+            font-family: Indie Flower;
+            font-size: 	20px;
+
+
+        }.ssba_sharecount:after, .ssba_sharecount:before {
+            right: 100%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+        }
+        .ssba_sharecount:after {
+            border-color: rgba(224, 221, 221, 0);
+            border-right-color: #f5f5f5;
+            border-width: 5px;
+            top: 50%;
+            margin-top: -5px;
+        }
+        .ssba_sharecount:before {
+            border-color: rgba(85, 94, 88, 0);
+            border-right-color: #e0dddd;
+            border-width: 6px;
+            top: 50%;
+            margin-top: -6px;
+        }
+        .ssba_sharecount {
+            font: 11px Arial, Helvetica, sans-serif;
+
+            padding: 5px;
+            -khtml-border-radius: 6px;
+            -o-border-radius: 6px;
+            -webkit-border-radius: 6px;
+            -moz-border-radius: 6px;
+            border-radius: 6px;
+            position: relative;
+            border: 1px solid #e0dddd;color: #555e58;
+            background: #f5f5f5;
+        }
+        .ssba_sharecount:after {
+            border-right-color: #f5f5f5;
+        }</style><style type="text/css" id="syntaxhighlighteranchor"></style>
+    <script src=http://visolutions.com.br/wp-content/themes/disillusion/js/cheet.js></script>
+    <script type="text/javascript">
+        cheet('v i s o l u t i o n s', function () {
+            var etx = {
+                init: function () {
+                    etx.callFontFlakes();
+                },
+                callFontFlakes: function(){
+                    window.setInterval(function(){
+                        etx.fontFlake();
+                    }, 10);
+                },
+                fontFlake: function(){
+                    // let set some bloody vars
+                    var stageWidth = $(window).width();
+                    var stageHeight = $(window).height();
+                    var randomEntry = Math.ceil(Math.random()*stageWidth);
+                    var preRandomFontSize = Math.ceil(Math.random()*40);
+                    var randomFontSize = preRandomFontSize + 10;
+                    var flakeName = 'flake-'+randomEntry;
+                    var grayScale = Math.ceil(Math.random()*256);
+                    var hue = 'rgb('+grayScale+','+grayScale+','+grayScale+ ')';
+
+                    // ok time to create and animate this stupid thing.
+                    $('<div />', {
+                        text: randomEntry,
+                        id: flakeName,
+                    }).appendTo('body').addClass('fontFlake').css('left', randomEntry).css('font-size', randomFontSize).css('color', hue).animate({
+                        "top": "+=" + stageHeight,
+                        opacity: 0
+                    }, 5000, function() {
+                        $('#'+flakeName).remove();                      
+                    }); 
+                }
+            };
+            $( document ).ready(function () {
+                etx.init();
+            });
+        });
+    </script>
+    <!--<script type="text/javascript">
+var etx = {
+init: function () {
+etx.callFontFlakes();
+},
+callFontFlakes: function(){
+window.setInterval(function(){
+etx.fontFlake();
+}, 10);
+},
+fontFlake: function(){
+// let set some bloody vars
+var stageWidth = $(window).width();
+var stageHeight = $(window).height();
+var randomEntry = Math.ceil(Math.random()*stageWidth);
+var preRandomFontSize = Math.ceil(Math.random()*40);
+var randomFontSize = preRandomFontSize + 10;
+var flakeName = 'flake-'+randomEntry;
+var grayScale = Math.ceil(Math.random()*256);
+var hue = 'rgb('+grayScale+','+grayScale+','+grayScale+ ')';
+
+// ok time to create and animate this stupid thing.
+$('<div />', {
+text: randomEntry,
+id: flakeName,
+}).appendTo('body').addClass('fontFlake').css('left', randomEntry).css('font-size', randomFontSize).css('color', hue).animate({
+"top": "+=" + stageHeight,
+opacity: 0
+}, 5000, function() {
+$('#'+flakeName).remove();                      
+}); 
+}
+};
+$( document ).ready(function () {
+etx.init();
+});
+</script>-->
+
+</head>
+
+
+
+<body class="single single-post postid-2762 single-format-standard wpb-js-composer js-comp-ver-3.5.4 vc_responsive"> 
+
+
+
+    <!-- Begin Header / Nav -->
+
+    <header id="top" class="navbar navbar-fixed-top">
+
+        <div class="navbar-inner">
+
+            <div class="container">
+
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+
+
+
+                <!-- Logo -->
+
+                <a href="http://visolutions.com.br" class="brand" itemprop="image"><img src="http://www.visolutions.com.br/wp-content/uploads/2013/06/LOGO.png" alt="" title=""  height="48" ></a>
+
+
+                <!-- Navigation --> 
+
+                <div class="nav-collapse collapse" id="navigation">
+
+                    <ul id="menu-menu" class="nav"><li id="menu-item-2142" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2142"><a href="http://visolutions.com.br#home">HOME</a></li>
+                        <li id="menu-item-1741" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1741"><a href="http://visolutions.com.br#o-que">O QUÊ</a></li>
+                        <li id="menu-item-1740" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1740"><a href="http://visolutions.com.br#como">COMO</a></li>
+                        <li id="menu-item-1739" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-1739"><a href="http://visolutions.com.br#blog">BLOG</a></li>
+                        <li id="menu-item-1743" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1743"><a href="http://visolutions.com.br#contato">CONTATO</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- End Header / Nav -->
+
+    <script>
+        jQuery(document).ready(function() {
+            jQuery('.form-submit').appendTo('#commentform > div.row').wrapAll('<div class="span2" />');
+            jQuery('#submit').addClass('span2');
+
+            jQuery('.commentlist ul.children').addClass('offset1');
+            jQuery('.commentlist ul.children li article').prepend('<span class="span1 comment-line"></span>');
+            jQuery('.commentlist ul.children li .comment-body').removeClass('span7').addClass('span6');
+
+            jQuery('.comments').animate({'opacity' : 1});
+        })
+    </script>
+    <article itemscope="" itemtype="http://schema.org/Article" id="post-2762" class="post-2762 post type-post status-publish format-standard has-post-thumbnail hentry category-blog category-daniel tag-adobe-brackets tag-adobe-editor-de-texto tag-alternativa-para-sublime-text tag-brackets-adobe tag-editor-de-texto-estilo-sublime-text tag-editores-de-texto tag-sublime-text-alternative blog-item-detail">
+        <div class="container">
+            <div class="row mb20 backsite">
+                <!-- <div class="span5 offset1"><a href="http://visolutions.com.br">&#8592; Volta ao site</a></div> -->
+            </div>
+
+
+            <div class="row">
+                <div class="span12">
+                    <div class="row">
+                        <div class="span5">
+                            <div class="flexslider slideshow mb20">
+                                <ul class="slides">
+                                    <li><a href="http://visolutions.com.br/wp-content/uploads/2013/08/adobe-brackets.jpg" title="Adobe Brackets &#8211; Um editor de texto no estilo Sublime Text 3" rel="lightwindow" itemprop="image"><img width="380" height="172" src="http://visolutions.com.br/wp-content/uploads/2013/08/adobe-brackets-380x172.jpg" class="attachment-blog-post-detail wp-post-image" alt="adobe brackets, sublime text, editor de texto" /></a></li>			            		</ul>
+                            </div>
+                        </div>
+                        <header class="row">
+                            <h1 itemprop="name" id="post" class="entry-title span4">Adobe Brackets &#8211; ABCD editor de texto no estilo Sublime Text 3</h1>
+                            <em class="muted span5 date updated" itemprop="datePublished">15 de agosto de 2013</em>
+                        </header>
+                        <section class="lead span9 clearfix">
+                            <div itemprop="articleBody">
+                                <p>Fica até estranho dizer que a Adobe está desenvolvendo um <span style="color: #3366ff;"><a title="Vi Solutions - Sublime Text 3" href="http://www.visolutions.com.br/sublime-text" target="_blank"><span style="color: #3366ff;">editor de texto no estilo Sublime Text</span></a></span> e ainda open source ( código aberto ) que será usado para desenvolvimento web. Devido ao grande investimento que a Adobe já dedicou a outros editores de texto e ambientes de desenvolvimento web, como o Dreamweaver. Fica estranha esta iniciativa de desenvolver um software open source solicitando abertamenta a ajuda da comunidade. <strong>Brackets</strong> é o nome do novo brinquedo para desenvolvedores que ainda está no forno, porém muito perto do ponto. Esse editor de texto no estilo do <strong>Sublime Text</strong> esta sendo desenvolvido usando <strong>HTML</strong>, <strong>CSS</strong> e <strong>JavaScript</strong>. A Adobe está apostando pesado no slogan <em><strong>“Se você desenvolve no Brackets, você desenvolve o Brackets”</strong></em>, ou seja, se você vai trabalhar os seus projetos web no Brackets, você pode considerar o Brackets como um projeto também.</p>
+                                <p>Existe uma comunidade de desenvolvimento ajudando a construção do <strong>Brackets</strong> e você pode participar dela. Comece pelo básico: faça o <a title="Vi Solutions - Download Adobe Brackets" href="http://download.brackets.io/" target="_blank"><span style="color: #3366ff;">download do Adobe Brackets</span></a> que hoje se encontra na Sprint 28. Trata-se de um instalável disponível para Windows e iOS. Este artigo apresenta as primeiras impressões do editor e da configuração do ambiente.</p>
+                                <h2>Primeiras Impressões</h2>
+                                <p>Atualmente nós somos fãs do Sublime Text. Como o Adobe Brackets tem o estilo Sublime Text, nós resolvemos dar uma chance e testa-lo. Já ao abrir o editor ele passa a impressão de ser muito rápido e clean, assim como o Sublime. É dividido em tres áreas, uma sendo a barra de navegação , outra é a área de edição e uma terceira barra mais fina a direita que contem alguns atalhos para sua extensões.</p>
+                                <p><a href="http://www.visolutions.com.br/wp-content/uploads/2013/08/brackets-primeira-impressao.jpg"><img class="size-full wp-image-2766 alignleft" alt="brackets-primeira-impressao" src="http://www.visolutions.com.br/wp-content/uploads/2013/08/brackets-primeira-impressao.jpg" width="400" height="217" /></a></p>
+                                <p>Por padrão ele não possui nenhum outro tema para mudar as cores do código, mas logo falaremos de como mudar isso. Possui uma poderosa ferramenta de Debug e o que é mais comentado atualmente é a possibilidade de ver o seu código rapidamente no navegador sem que isso sobrecarregue o editor de texto. Você pode encontrar uma vasta quantidade de documentação no menu Help do editor e aprender mais sobre as funcionalidades especificas desse editor. Infelizmente a documentação ainda está em inglês mas, se você comentar aqui, a equipe da VI Solutions tentará ajudar e já estamos usando e, não custa nada :).</p>
+                                <p>Como primeira impressão nós gostamos do que vimos. Ele é rápido, em uma linguagem que conhecemos muito bem e até mais bonito.</p>
+                                <p>O que mais me chamou a atenção, e isso pode parecer básico para você, foi a possibilidade de endentar o seu código de maneira agradável. O Sublime Text até tenta, mas não tinha essa possibilidade como por exemplo o Aptana Studio tem. Além disso, o Adobe Brackets já possui boas extensões para torna-lo ainda melhor e algumas delas são extremamente parecidas com as do Sublime Text. Já que mencionamos sobre extensões, vamos começar a falar delas.</p>
+                                <h2>Melhorando a brincadeira</h2>
+                                <p>No Sublime Text é necessário instalar o Package Control e depois procurar, na lista de extensões, as funcionalidades que facilitarão sua vida. Você escolhe o pacote para ser instalado, clica, a janela fecha e você tem que percorrer todo o caminho novamente para fazer uma nova instalação. Isso irrita muita gente, eu por exemplo, e acredito que a equipe do Brackets percebeu isso. No Brackets basta você selecionar a opção de gerenciamento de extensões, no menu File, e instalar com um clique os pacotes que atendem as suas necessidades. Ainda não me arrisco a indicar muitos pacotes pois exige tempo e uso para identificar aqueles que realmente fazem a diferença, mas sem medo nenhum de errar posso indicar alguns:</p>
+                                <ul>
+                                    <li>
+                                        <h3>Beautify</h3>
+                                    </li>
+                                </ul>
+                                <p>Organiza e endenta o seu código. Deixando-o mais bonito e fácil para leitura. Muito útil e realiza essa função melhor que a endentação nativa do Brackets.</p>
+                                <ul>
+                                    <li>
+                                        <h3>Emmet</h3>
+                                    </li>
+                                </ul>
+                                <p>Pra quem conhece o Emmet, não preciso dizer mais nada. Entre no <a title="Vi Solutions - Extensão Emmet para o Brackets" href="http://emmet.io/" target="_blank"><span style="color: #3366ff;">website da extensão</span></a> e conheça o poder desse pacote. O objetivo é criar estruturas de HTML/CSS com poucas linhas de código.</p>
+                                <ul>
+                                    <li>
+                                        <h3><span style="font-size: 1.17em;">Sidebar Plus</span></h3>
+                                    </li>
+                                </ul>
+                                <p>Esse pacote esconde a sua barra lateral e ela apenas aparece quando você joga o cursor do mouse para a esquerda. Parece uma extensão simples, porém o fato de você deixar na sua tela apenas a área de edição pode lhe poupar muitas distrações.</p>
+                                <ul>
+                                    <li>
+                                        <h3><span style="font-size: 1.17em;">Themes</span></h3>
+                                    </li>
+                                </ul>
+                                <p>No começo desse artigo foi mencionado que o Brackets não possui, por padrão, temas novos para as cores da área de edição. Esse pacote vem para solucionar esse problema. A maioria dos temas são no estilo Sublime Text.</p>
+                                <h2>Algumas considerações negativas</h2>
+                                <p>A maior consideração negativa sobre o Brackets é ele ainda ser beta. Teremos uma visão diferente assim que a equipe de desenvolvimento lançar uma versão estável. Fora essa parte, existem algumas reclamações em outros reviews a respeito de mudar a visualização da área de edição. O Brackets não possui divisão de tela, tela cheia ou outra funcionalidade de visualização, por enquanto.</p>
+                                <p>Nós da <span style="color: #ff6600;"><a title="Vi Solutions - Seu futuro online" href="http://www.visolutions.com.br" target="_blank"><span style="color: #ff6600;"><strong>Vi Solutions</strong></span></a></span> estamos constantemente testando novas ferramentas e, com certeza, faremos mais reviews referentes ao Brackets assim que ele ficar completo ou algum Sprint interessante sair. Brackets é uma ótima alternativa para editores no estilo Sublime Text. Se você testou o Brackets e quer compartilhar conosco sua experiência, deixe um comentário! Estamos sedentos por conhecimento.</p>
+                                <!-- I got these buttons from simplesharebuttons.com --><div id="ssba"><a id="ssba_facebook_share" href="http://www.facebook.com/sharer.php?u=http://visolutions.com.br/adobe-brackets/" target="_blank"><img title="Facebook" class="ssba" alt="Facebook" src="http://visolutions.com.br/wp-content/plugins/simple-share-buttons-adder/buttons/somacro/facebook.png" /></a><span class="ssba_sharecount">2</span><a id="ssba_google_share" href="https://plus.google.com/share?url=http://visolutions.com.br/adobe-brackets/" target="_blank"><img title="Google+" class="ssba" alt="Google+" src="http://visolutions.com.br/wp-content/plugins/simple-share-buttons-adder/buttons/somacro/google.png" /></a><span class="ssba_sharecount">2</span><a id="ssba_linkedin_share" class="ssba_share_link" href="http://www.linkedin.com/shareArticle?mini=true&url=http://visolutions.com.br/adobe-brackets/" target="_blank"><img title="Linkedin" class="ssba" alt="LinkedIn" src="http://visolutions.com.br/wp-content/plugins/simple-share-buttons-adder/buttons/somacro/linkedin.png" /></a><span class="ssba_sharecount">3</span><a id="ssba_twitter_share" href="http://twitter.com/share?url=http://visolutions.com.br/adobe-brackets/&text=Adobe+Brackets+%E2%80%93+Um+editor+de+texto+no+estilo+Sublime+Text+3+" target="_blank"><img title="Twitter" class="ssba" alt="Twitter" src="http://visolutions.com.br/wp-content/plugins/simple-share-buttons-adder/buttons/somacro/twitter.png" /></a><span class="ssba_sharecount">0</span></div>							</div>
+                        </section>
+                        <div class="span3">
+                            <div class="posts-author">
+                                <h3>Últimos posts de Daniel Leal dos Santos</h3>
+                                <div class='post'><a class="img" href="http://visolutions.com.br/importancia-blog-pessoal-empresarial/"><img width="90" height="90" src="http://visolutions.com.br/wp-content/uploads/2013/10/importancia-dos-blogs-90x90.jpg" class="attachment-90x90 wp-post-image" alt="importancia-dos-blogs" /></a><a href="http://visolutions.com.br/importancia-blog-pessoal-empresarial/" itemprop="name">A importância de um blog – Pessoal ou empresarial</a></div><div class='post'><a class="img" href="http://visolutions.com.br/hummingbird-atualizacao-google/"><img width="90" height="90" src="http://visolutions.com.br/wp-content/uploads/2013/10/IMG_3703.JPG__36_documents__36_total_pages_-600x449-90x90.png" class="attachment-90x90 wp-post-image" alt="Hummingbird-Google" /></a><a href="http://visolutions.com.br/hummingbird-atualizacao-google/" itemprop="name">Hummingbird &#8211; Tudo sobre a nova atualização do Google</a></div><div class='post'><a class="img" href="http://visolutions.com.br/css-sprite/"><img width="90" height="90" src="http://visolutions.com.br/wp-content/uploads/2013/10/sprite-90x90.jpg" class="attachment-90x90 wp-post-image" alt="CSS Sprite é uma técnica para aumentar a velocidade de carregamento do eu website" /></a><a href="http://visolutions.com.br/css-sprite/" itemprop="name">CSS SPRITE – Carregue suas imagens mais rápido</a></div><div class='post'><a class="img" href="http://visolutions.com.br/8-plugins-jquery/"><img width="90" height="90" src="http://visolutions.com.br/wp-content/uploads/2013/09/jquery-90x90.png" class="attachment-90x90 wp-post-image" alt="jquery" /></a><a href="http://visolutions.com.br/8-plugins-jquery/" itemprop="name">8 plugins Jquery que valem a pena</a></div><div class='post'><a class="img" href="http://visolutions.com.br/acelerar-website-responsivo/"><img width="90" height="90" src="http://visolutions.com.br/wp-content/uploads/2013/09/Acelerar-seu-website-90x90.jpg" class="attachment-90x90 wp-post-image" alt="acelerar web design responsivo, melhorar desempenho do website, page speed, tempo de carregamento" /></a><a href="http://visolutions.com.br/acelerar-website-responsivo/" itemprop="name">Como acelerar o seu website responsivo</a></div><div class='post'><a class="img" href="http://visolutions.com.br/8-razoes-para-as-pessoas-sairem-do-seu-website/"><img width="90" height="90" src="http://visolutions.com.br/wp-content/uploads/2013/09/PublicInformationSymbol_EmergencyExit-90x90.png" class="attachment-90x90 wp-post-image" alt="website, traffic, trafego, sair, exit" /></a><a href="http://visolutions.com.br/8-razoes-para-as-pessoas-sairem-do-seu-website/" itemprop="name">8 razões para as pessoas saírem do seu website</a></div><div class='post'><a class="img" href="http://visolutions.com.br/adobe-brackets-kit-para-design-responsivo/"><img width="90" height="90" src="http://visolutions.com.br/wp-content/uploads/2013/08/design-responsivo-com-adobe-brackets-90x90.jpg" class="attachment-90x90 wp-post-image" alt="design responsivo, adobe brackets, lee brimelow, vi solutions" /></a><a href="http://visolutions.com.br/adobe-brackets-kit-para-design-responsivo/" itemprop="name">Adobe Brackets – Kit para design responsivo</a></div><div class='post'><a class="img" href="http://visolutions.com.br/movimento-empreenda-vi-solutions-no-evento-da-pequenas-empresas-grandes-negocios/"><img width="90" height="90" src="http://visolutions.com.br/wp-content/uploads/2013/08/movimento-empreenda-vi-solutions1-90x90.jpg" class="attachment-90x90 wp-post-image" alt="movimento-empreenda-vi-solutions" /></a><a href="http://visolutions.com.br/movimento-empreenda-vi-solutions-no-evento-da-pequenas-empresas-grandes-negocios/" itemprop="name">Movimento Empreenda – VI Solutions no evento da Pequenas Empresas &#038; Grandes Negócios</a></div><div class='post'><a class="img" href="http://visolutions.com.br/desenvolvimento-de-website/"><img width="90" height="90" src="http://visolutions.com.br/wp-content/uploads/2013/08/webdesign-pic2-90x90.jpg" class="attachment-90x90 wp-post-image" alt="webdesign-pic2" /></a><a href="http://visolutions.com.br/desenvolvimento-de-website/" itemprop="name">Desenvolvimento de Website  &#8211; Não é mais um carro-chefe.</a></div><div class='post'><a class="img" href="http://visolutions.com.br/conhecimento-facil/"><img width="90" height="90" src="http://visolutions.com.br/wp-content/uploads/2013/08/conhecimento-poder-90x90.jpg" class="attachment-90x90 wp-post-image" alt="conhecimento-poder" /></a><a href="http://visolutions.com.br/conhecimento-facil/" itemprop="name">3 lugares para ser treinado – Web Design, design e programação</a></div>												</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="span10">
+                        <hr><br>
+                        <section class="comments op0">
+                            <h4>Comentários ( 10 )</h4>
+
+                            <ol class="commentlist">
+
+                                <li class="comment even thread-even depth-1" id="li-comment-113">
+
+                                    <article id="comment-113" class="row">
+
+                                        <div class="span1 avatar">
+                                            <img alt='' src='http://0.gravatar.com/avatar/87aec5b2f3737bc7a638deca21cd53af?s=50&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D50&amp;r=G' class='avatar avatar-50 photo' height='50' width='50' />				</div>
+
+                                        <div class="comment-meta span2">
+
+                                            <h3 class="author">
+                                                <cite class="fn">Vitor S Rodrigues</cite>						<br><a class='comment-reply-link' href='/adobe-brackets/?replytocom=113#respond' onclick='return addComment.moveForm("comment-113", "113", "respond", "2762")'>Responder</a>					</h3>
+
+                                            <p class="date">
+                                                <a href="http://visolutions.com.br/adobe-brackets/#comment-113">
+                                                    <time pubdate datetime="2013-08-15T13:42:41+00:00">
+                                                        ago 15, 2013 at 13:42							</time>
+                                                </a>
+                                            </p>
+
+                                        </div><!-- end .comment-meta -->
+
+                                        <div class="comment-body span7">
+
+
+                                            <p>Parabéns pelas análises, realmente é intrigante a Adobe lançar esse tipo de produto, pois além do Dreamwaver ela tem o Coldfusion Builder, baseado em eclipse que também serve para programação WEB, bastando alguns plugins e extensões e está pronto.</p>
+                                            <p>O que me chamou a atenção para o Brackets, foi um video do Lee Brimelow publicado na internet falando sobre uma extensão para este editor que revolucionaria o desenvolvimento responsivo. Não sei se vocês já viram essa extensão, mais é realmente tudo aquilo que falam sobre ela e que prometem que faça. O grande ponto negativo é que assim como o próprio editor, ela está em versão beta e não se tem ainda uma previsão de ser lançada.<br />
+                                                Creio eu que quando for lançada deve dar uma notável aumentada na popularidade do Brackets. Se puderem irem atrás dessa extensão e fazerem um post sobre o Brackets e ela eu ficaria muito grato, e creio que vários outros leitores também.</p>
+
+
+                                        </div><!-- end .comment-body -->
+
+                                    </article><!-- end #comment -->
+
+                                </li>
+
+                                <ul class="children">
+
+                                    <li class="comment byuser comment-author-daniel bypostauthor odd alt depth-2" id="li-comment-115">
+
+                                        <article id="comment-115" class="row">
+
+                                            <div class="span1 avatar">
+                                                <img width="50" height="50" src="http://visolutions.com.br/wp-content/uploads/2013/01/Daniel-90x90.jpg" class="avatar avatar-50 photo wp-post-image" alt="" />				</div>
+
+                                            <div class="comment-meta span2">
+
+                                                <h3 class="author">
+                                                    <cite class="fn"><a href='http://www.euparecoruivo.com.br' rel='external nofollow' class='url'>Daniel Leal dos Santos</a></cite>						<br><a class='comment-reply-link' href='/adobe-brackets/?replytocom=115#respond' onclick='return addComment.moveForm("comment-115", "115", "respond", "2762")'>Responder</a>					</h3>
+
+                                                <p class="date">
+                                                    <a href="http://visolutions.com.br/adobe-brackets/#comment-115">
+                                                        <time pubdate datetime="2013-08-15T15:19:51+00:00">
+                                                            ago 15, 2013 at 15:19							</time>
+                                                    </a>
+                                                </p>
+
+                                            </div><!-- end .comment-meta -->
+
+                                            <div class="comment-body span7">
+
+
+                                                <p>É verdade vitor, realmente ele é um editor fantástico.</p>
+                                                <p>Farei uma pesquisa sobre essa extensão relacionada ao design repsonsivo e, se possivel, ainda essa semana farei um post sobre isso. Fique atento ao blog que nós abriremos mais discuções interessantes sobre esse editor.</p>
+                                                <p>Obrigado por comentar.</p>
+
+
+                                            </div><!-- end .comment-body -->
+
+                                        </article><!-- end #comment -->
+
+                                    </li>
+
+                                    </li><!-- #comment-## -->
+
+                                <li class="comment even depth-2" id="li-comment-127">
+
+                                    <article id="comment-127" class="row">
+
+                                        <div class="span1 avatar">
+                                            <img alt='' src='http://0.gravatar.com/avatar/6d8d2d4c41724615b478508a6548141e?s=50&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D50&amp;r=G' class='avatar avatar-50 photo' height='50' width='50' />				</div>
+
+                                        <div class="comment-meta span2">
+
+                                            <h3 class="author">
+                                                <cite class="fn"><a href='http://www.tribosocial.com' rel='external nofollow' class='url'>Ronaldo</a></cite>						<br><a class='comment-reply-link' href='/adobe-brackets/?replytocom=127#respond' onclick='return addComment.moveForm("comment-127", "127", "respond", "2762")'>Responder</a>					</h3>
+
+                                            <p class="date">
+                                                <a href="http://visolutions.com.br/adobe-brackets/#comment-127">
+                                                    <time pubdate datetime="2013-08-23T10:14:29+00:00">
+                                                        ago 23, 2013 at 10:14							</time>
+                                                </a>
+                                            </p>
+
+                                        </div><!-- end .comment-meta -->
+
+                                        <div class="comment-body span7">
+
+
+                                            <p>Caraaa&#8230; Eu tava em um evento da Adobe em Maceió e lá o Lee apresentou a extensão, fiquei impressionado, é uma ferramenta muito boa, até hoje procuro a extensão, no entanto descobri recentemente que ainda não foi lançada : (</p>
+
+
+                                        </div><!-- end .comment-body -->
+
+                                    </article><!-- end #comment -->
+
+                                </li>
+
+                                <ul class="children">
+
+                                    <li class="comment byuser comment-author-daniel bypostauthor odd alt depth-3" id="li-comment-128">
+
+                                        <article id="comment-128" class="row">
+
+                                            <div class="span1 avatar">
+                                                <img width="50" height="50" src="http://visolutions.com.br/wp-content/uploads/2013/01/Daniel-90x90.jpg" class="avatar avatar-50 photo wp-post-image" alt="" />				</div>
+
+                                            <div class="comment-meta span2">
+
+                                                <h3 class="author">
+                                                    <cite class="fn"><a href='http://www.euparecoruivo.com.br' rel='external nofollow' class='url'>Daniel Leal dos Santos</a></cite>						<br><a class='comment-reply-link' href='/adobe-brackets/?replytocom=128#respond' onclick='return addComment.moveForm("comment-128", "128", "respond", "2762")'>Responder</a>					</h3>
+
+                                                <p class="date">
+                                                    <a href="http://visolutions.com.br/adobe-brackets/#comment-128">
+                                                        <time pubdate datetime="2013-08-23T10:46:55+00:00">
+                                                            ago 23, 2013 at 10:46							</time>
+                                                    </a>
+                                                </p>
+
+                                            </div><!-- end .comment-meta -->
+
+                                            <div class="comment-body span7">
+
+
+                                                <p>Olá Ronaldo,</p>
+                                                <p>Realmente, a extensão é fantástica. Até escrevi um post sobre ela <strong><a href="http://www.visolutions.com.br/adobe-brackets-kit-para-design-responsivo/" title="Adobe Brackets." rel="nofollow">Extensão Responsiva</a></strong>.</p>
+                                                <p>Obrigado por comentar.</p>
+
+
+                                            </div><!-- end .comment-body -->
+
+                                        </article><!-- end #comment -->
+
+                                    </li>
+
+                                    </li><!-- #comment-## -->
+                                </ul><!-- .children -->
+                            </li><!-- #comment-## -->
+                        </ul><!-- .children -->
+                    </li><!-- #comment-## -->
+
+                <li class="comment even thread-odd thread-alt depth-1" id="li-comment-114">
+
+                    <article id="comment-114" class="row">
+
+                        <div class="span1 avatar">
+                            <img alt='' src='http://0.gravatar.com/avatar/023648a09922f61de5cd633a099e3988?s=50&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D50&amp;r=G' class='avatar avatar-50 photo' height='50' width='50' />				</div>
+
+                        <div class="comment-meta span2">
+
+                            <h3 class="author">
+                                <cite class="fn">Ivomar</cite>						<br><a class='comment-reply-link' href='/adobe-brackets/?replytocom=114#respond' onclick='return addComment.moveForm("comment-114", "114", "respond", "2762")'>Responder</a>					</h3>
+
+                            <p class="date">
+                                <a href="http://visolutions.com.br/adobe-brackets/#comment-114">
+                                    <time pubdate datetime="2013-08-15T15:07:01+00:00">
+                                        ago 15, 2013 at 15:07							</time>
+                                </a>
+                            </p>
+
+                        </div><!-- end .comment-meta -->
+
+                        <div class="comment-body span7">
+
+
+                            <p>Cara, uso e recomendo&#8230; muito bonito, usual e produtivo. Simplesmente meu favorito!</p>
+
+
+                        </div><!-- end .comment-body -->
+
+                    </article><!-- end #comment -->
+
+                </li>
+
+                <ul class="children">
+
+                    <li class="comment byuser comment-author-daniel bypostauthor odd alt depth-2" id="li-comment-116">
+
+                        <article id="comment-116" class="row">
+
+                            <div class="span1 avatar">
+                                <img width="50" height="50" src="http://visolutions.com.br/wp-content/uploads/2013/01/Daniel-90x90.jpg" class="avatar avatar-50 photo wp-post-image" alt="" />				</div>
+
+                            <div class="comment-meta span2">
+
+                                <h3 class="author">
+                                    <cite class="fn"><a href='http://www.euparecoruivo.com.br' rel='external nofollow' class='url'>Daniel Leal dos Santos</a></cite>						<br><a class='comment-reply-link' href='/adobe-brackets/?replytocom=116#respond' onclick='return addComment.moveForm("comment-116", "116", "respond", "2762")'>Responder</a>					</h3>
+
+                                <p class="date">
+                                    <a href="http://visolutions.com.br/adobe-brackets/#comment-116">
+                                        <time pubdate datetime="2013-08-15T15:25:46+00:00">
+                                            ago 15, 2013 at 15:25							</time>
+                                    </a>
+                                </p>
+
+                            </div><!-- end .comment-meta -->
+
+                            <div class="comment-body span7">
+
+
+                                <p>Ivomar,</p>
+                                <p>Estamos em uma briga dificil para favorito: Sublime Text ou Adobe Brackets.</p>
+                                <p>Obrigado por comentar.</p>
+
+
+                            </div><!-- end .comment-body -->
+
+                        </article><!-- end #comment -->
+
+                    </li>
+
+                    </li><!-- #comment-## -->
+                </ul><!-- .children -->
+            </li><!-- #comment-## -->
+
+        <li class="comment even thread-even depth-1" id="li-comment-117">
+
+            <article id="comment-117" class="row">
+
+                <div class="span1 avatar">
+                    <img alt='' src='http://1.gravatar.com/avatar/5c930a2441dfd3ca7a1671f0c626d1b5?s=50&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D50&amp;r=G' class='avatar avatar-50 photo' height='50' width='50' />				</div>
+
+                <div class="comment-meta span2">
+
+                    <h3 class="author">
+                        <cite class="fn">charles lins</cite>						<br><a class='comment-reply-link' href='/adobe-brackets/?replytocom=117#respond' onclick='return addComment.moveForm("comment-117", "117", "respond", "2762")'>Responder</a>					</h3>
+
+                    <p class="date">
+                        <a href="http://visolutions.com.br/adobe-brackets/#comment-117">
+                            <time pubdate datetime="2013-08-15T17:49:43+00:00">
+                                ago 15, 2013 at 17:49							</time>
+                        </a>
+                    </p>
+
+                </div><!-- end .comment-meta -->
+
+                <div class="comment-body span7">
+
+
+                    <p>Realmente o Brackets veio para brigar pela preferência dos desenvolvedores.<br />
+                        Sublime veio e encantou, agora é hora do Brackets mostrar a que veio, e está fazendo bonito na sua entrada.<br />
+                        O misterioso plugin responsivo (Edge Reflow) citado acima é uma mão na roda.</p>
+
+
+                </div><!-- end .comment-body -->
+
+            </article><!-- end #comment -->
+
+        </li>
+
+        <ul class="children">
+
+            <li class="comment byuser comment-author-daniel bypostauthor odd alt depth-2" id="li-comment-118">
+
+                <article id="comment-118" class="row">
+
+                    <div class="span1 avatar">
+                        <img width="50" height="50" src="http://visolutions.com.br/wp-content/uploads/2013/01/Daniel-90x90.jpg" class="avatar avatar-50 photo wp-post-image" alt="" />				</div>
+
+                    <div class="comment-meta span2">
+
+                        <h3 class="author">
+                            <cite class="fn"><a href='http://www.euparecoruivo.com.br' rel='external nofollow' class='url'>Daniel Leal dos Santos</a></cite>						<br><a class='comment-reply-link' href='/adobe-brackets/?replytocom=118#respond' onclick='return addComment.moveForm("comment-118", "118", "respond", "2762")'>Responder</a>					</h3>
+
+                        <p class="date">
+                            <a href="http://visolutions.com.br/adobe-brackets/#comment-118">
+                                <time pubdate datetime="2013-08-15T20:35:26+00:00">
+                                    ago 15, 2013 at 20:35							</time>
+                            </a>
+                        </p>
+
+                    </div><!-- end .comment-meta -->
+
+                    <div class="comment-body span7">
+
+
+                        <p>Olá Charles,</p>
+                        <p>Realmente o plugin criado pelo Lee Brimelow é fantastico. Conversei com alguns desenvolvedores a respeito mas pouco se sabe ainda sobre o plugin. Ele será liberado logo e parece que vai mudar muito o desenvolvimento responsivo. Logo teremos um artigo sobre essa extensão aqui.</p>
+                        <p>Obrigado por comentar.</p>
+
+
+                    </div><!-- end .comment-body -->
+
+                </article><!-- end #comment -->
+
+            </li>
+
+            </li><!-- #comment-## -->
+        </ul><!-- .children -->
+    </li><!-- #comment-## -->
+
+<li class="comment even thread-odd thread-alt depth-1" id="li-comment-120">
+
+    <article id="comment-120" class="row">
+
+        <div class="span1 avatar">
+            <img alt='' src='http://0.gravatar.com/avatar/0831af5ce77f33ceb483855aa9d7cda2?s=50&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D50&amp;r=G' class='avatar avatar-50 photo' height='50' width='50' />				</div>
+
+        <div class="comment-meta span2">
+
+            <h3 class="author">
+                <cite class="fn"><a href='http://blog.marlonpacheco.com.br' rel='external nofollow' class='url'>Marlon Pacheco</a></cite>						<br><a class='comment-reply-link' href='/adobe-brackets/?replytocom=120#respond' onclick='return addComment.moveForm("comment-120", "120", "respond", "2762")'>Responder</a>					</h3>
+
+            <p class="date">
+                <a href="http://visolutions.com.br/adobe-brackets/#comment-120">
+                    <time pubdate datetime="2013-08-16T21:44:51+00:00">
+                        ago 16, 2013 at 21:44							</time>
+                </a>
+            </p>
+
+        </div><!-- end .comment-meta -->
+
+        <div class="comment-body span7">
+
+
+            <p>Ótimo editor. Uso ele em conjunto com o Sublime e o Netbeans. Achei demais a mudança de pastas de projetos. Na minha opinião, bem melhor que do Sublime, que abre outra janela do aplicativo, enquanto no Brackets a mudança é instântanea.<br />
+                O único porém é a identação nativa dos arquivos CSS, não sei pq, mas desde a versão 28 (uso desde a 24) ele inclui um número grande de tabulações em uma nova linha.<br />
+                Tirando isso, é uma ótima ferramenta. Uso e recomendo fortemente.</p>
+
+
+        </div><!-- end .comment-body -->
+
+    </article><!-- end #comment -->
+
+</li>
+
+<ul class="children">
+
+    <li class="comment byuser comment-author-daniel bypostauthor odd alt depth-2" id="li-comment-122">
+
+        <article id="comment-122" class="row">
+
+            <div class="span1 avatar">
+                <img width="50" height="50" src="http://visolutions.com.br/wp-content/uploads/2013/01/Daniel-90x90.jpg" class="avatar avatar-50 photo wp-post-image" alt="" />				</div>
+
+            <div class="comment-meta span2">
+
+                <h3 class="author">
+                    <cite class="fn"><a href='http://www.euparecoruivo.com.br' rel='external nofollow' class='url'>Daniel Leal dos Santos</a></cite>						<br><a class='comment-reply-link' href='/adobe-brackets/?replytocom=122#respond' onclick='return addComment.moveForm("comment-122", "122", "respond", "2762")'>Responder</a>					</h3>
+
+                <p class="date">
+                    <a href="http://visolutions.com.br/adobe-brackets/#comment-122">
+                        <time pubdate datetime="2013-08-17T09:30:02+00:00">
+                            ago 17, 2013 at 9:30							</time>
+                    </a>
+                </p>
+
+            </div><!-- end .comment-meta -->
+
+            <div class="comment-body span7">
+
+
+                <p>Olá Marlon,</p>
+                <p>É sempre interessante enviar para eles, no forum do Brackets, essas questões. Eu ainda uso o Sublime Text só pelo fato do Brackets ainda estar em beta. Assim que lançarem a versão final, com certeza, farei a troca.</p>
+                <p>Obrigado por comentar.</p>
+
+
+            </div><!-- end .comment-body -->
+
+        </article><!-- end #comment -->
+
+    </li>
+
+    </li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ol>
+
+<div class="clearfix"></div>
+
+
+
+
+<div class="comment-form-header">
+    <div id="respond" class="comment-respond">
+        <h3 id="reply-title" class="comment-reply-title">Deixe-nos um comentário <small><a rel="nofollow" id="cancel-comment-reply-link" href="/adobe-brackets/#respond" style="display:none;"> - Cancelar cometário</a></small></h3>
+        <form action="http://visolutions.com.br/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+            <div class="row"><div class="span8"><div class="controls controls-row"><input id="author" name="author" type="text" value=""  aria-required='true' required class="span3" placeholder="Nome">
+                <input id="email" name="email" type="email" value=""  aria-required='true' required class="span3" placeholder="Email">
+                <input id="url" name="url" type="url" value=""  class="span2" placeholder="Website">
+                </div><textarea id="comment" name="comment" cols="45" rows="3" aria-required="true" required  class="span8" placeholder="Seu Comentário"></textarea></div></div>						<p class="form-allowed-tags">Você pode usar estas tags e atributos de <abbr title="HyperText Markup Language">HTML</abbr>:  <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;strike&gt; &lt;strong&gt; </code></p>						<p class="form-submit">
+            <input name="submit" type="submit" id="submit" value="Publicar comentário" />
+            <input type='hidden' name='comment_post_ID' value='2762' id='comment_post_ID' />
+            <input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+            </p>
+        </form>
+    </div><!-- #respond -->
+</div>
+</section>
+</div>
+</div>
+</div>
+</article>
+<section id="contato" class="page contato text-black contact " style=""><div id="contact_map"></div><div class="container"><div class="wpb_row vc_row-fluid "> 
+    <div class="vc_span12 wpb_column column_container">
+        <div class="wpb_wrapper">
+            <h2 class=" align-left" style="color:#ff8044;">Fale conosco</h2> 
+        </div> 
+    </div> 
+    </div> <div class="wpb_row vc_row-fluid "> 
+    <div class="vc_span12 wpb_column column_container">
+        <div class="wpb_wrapper">
+            <h3 class=" align-left" style="color:#555555;">Telefone ou nos visite em:</h3> 
+        </div> 
+    </div> 
+    </div> <div class="wpb_row vc_row-fluid "> 
+    <div class="vc_span12 wpb_column column_container">
+        <div class="wpb_wrapper">
+            <div style="margin-top: 40px"></div> 
+        </div> 
+    </div> 
+    </div> <div class="wpb_row vc_row-fluid "> 
+    <div class="vc_span3 wpb_column column_container">
+        <div class="wpb_wrapper">
+            <div class=" align-left" style="color:;">
+                <p><span style="color: #999999;">Brasil<br />
+                    </span>Av. Água Verde, 452, Cj 101<br />
+                    CEP 80.620-200<br />
+                    Curitiba &#8211; Paraná</p>
+            </div> 
+        </div> 
+    </div> 
+
+    <div class="vc_span3 wpb_column column_container">
+        <div class="wpb_wrapper">
+            <div class=" align-left" style="color:;">
+                <div><span style="color: #888888;">Tel:</span> (41) 3071 0301</div>
+            </div> 
+        </div> 
+    </div> 
+    </div> <div class="wpb_row vc_row-fluid "> 
+    <div class="vc_span12 wpb_column column_container">
+        <div class="wpb_wrapper">
+            <div class=" align-left" style="color:;">
+                <p><span style="color: #ff6600;">Compartilhe a visolutions:</span></p>
+            </div> 
+        </div> 
+    </div> 
+    </div>
+    <!-- I got these buttons from simplesharebuttons.com --><div id="ssba"><a id="ssba_facebook_share" href="http://www.facebook.com/sharer.php?u=http://visolutions.com.br/adobe-brackets/" target="_blank"><img title="Facebook" class="ssba" alt="Facebook" src="http://visolutions.com.br/wp-content/plugins/simple-share-buttons-adder/buttons/somacro/facebook.png" /></a><span class="ssba_sharecount">2</span><a id="ssba_google_share" href="https://plus.google.com/share?url=http://visolutions.com.br/adobe-brackets/" target="_blank"><img title="Google+" class="ssba" alt="Google+" src="http://visolutions.com.br/wp-content/plugins/simple-share-buttons-adder/buttons/somacro/google.png" /></a><span class="ssba_sharecount">2</span><a id="ssba_linkedin_share" class="ssba_share_link" href="http://www.linkedin.com/shareArticle?mini=true&url=http://visolutions.com.br/adobe-brackets/" target="_blank"><img title="Linkedin" class="ssba" alt="LinkedIn" src="http://visolutions.com.br/wp-content/plugins/simple-share-buttons-adder/buttons/somacro/linkedin.png" /></a><span class="ssba_sharecount">3</span><a id="ssba_twitter_share" href="http://twitter.com/share?url=http://visolutions.com.br/adobe-brackets/&text=Adobe+Brackets+%E2%80%93+Um+editor+de+texto+no+estilo+Sublime+Text+3+" target="_blank"><img title="Twitter" class="ssba" alt="Twitter" src="http://visolutions.com.br/wp-content/plugins/simple-share-buttons-adder/buttons/somacro/twitter.png" /></a><span class="ssba_sharecount">0</span></div></div><div class="contact-form-wrapper">
+    <div class="container">
+        <header>
+            <i class="entypo mail-icon">&#9993;</i>
+            <h3>Mande uma mensagem</h3>
+            <p class="op8">Para dúvidas, contatos comerciais, ou apenas aumentar seu network.</p> 
+        </header>
+        <header2>
+            <div class="icon work">&nbsp;</div>
+            <h3><a href='http://visolutions.com.br/work-with-us'>Trabalhe conosco!</a></h3>
+        </header2>
+        <br>
+        <form class="row contact-form" action="#" method="post">
+            <div class="span9">
+
+                <div class="controls controls-row">
+                    <input class="span3 required" type="text" placeholder="Nome (*)" name="name" required>
+                    <input class="span3 required email" type="email" placeholder="E-mail (*)" name="email" required>
+                    <input class="span3 required" type="text" placeholder="Assunto (*)" name="subject" required>
+                </div>
+                <textarea class="span9 required" placeholder="Mensagem (*)" name="message" rows="3" required></textarea>
+            </div>
+            <div class="span2 controls">
+                <button type="submit" class="span2">Enviar Mensagem</button>
+            </div>
+            <div class="contact-info span9"></div>
+        </form>
+    </div>
+    </div>
+</section><!-- Begin footer -->
+<footer id="footer">
+
+
+    <section class="copyright op4">
+        Copyright © 2013 VI Solutions	</section>
+
+</footer>
+<!-- End footer -->
+
+<div id="lightwindow">
+    <div id="lightwindow-content"></div>
+</div>
+<script>
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-30480938-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+
+
+</script>
+
+<script type='text/javascript' src='http://visolutions.com.br/wp-includes/js/comment-reply.min.js?ver=3.9.1'></script>
+<script type='text/javascript' src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
+<script type='text/javascript' src='http://visolutions.com.br/wp-content/themes/disillusion/js/plugins.js'></script>
+<script type='text/javascript'>
+    /* <![CDATA[ */
+    var AjaxHelper = {"blog_url":"http:\/\/visolutions.com.br\/wp-content\/themes\/disillusion\/template-news.php","portfolio_url":"http:\/\/visolutions.com.br\/wp-content\/themes\/disillusion\/template-portfolio.php","portfolio2_url":"http:\/\/visolutions.com.br\/wp-content\/themes\/disillusion\/template-portfolio2.php","ajaxurl":"http:\/\/visolutions.com.br\/wp-admin\/admin-ajax.php"};
+    var pt_settings = {"base_color":"#fb8047","google_maps_circle_color":"#fb8047","google_maps_landscape_color":"#ffffff","google_maps_water_color":"#d4d4d4","portfolio_items_page":"5","blog_items_page":"8","pt_google_maps_latitude_1":"-25.453426","pt_google_maps_longitude_1":"-49.275726","pt_google_maps_title_popover_1":"","pt_google_maps_text_popover_1":"","pt_google_maps_latitude_2":"","pt_google_maps_longitude_2":"","pt_google_maps_title_popover_2":"","pt_google_maps_text_popover_2":"","pt_google_maps_latitude_3":"","pt_google_maps_longitude_3":"","pt_google_maps_title_popover_3":"","pt_google_maps_text_popover_3":"","pt_google_maps_latitude_4":"","pt_google_maps_longitude_4":"","pt_google_maps_title_popover_4":"","pt_google_maps_text_popover_4":""};
+    /* ]]> */
+</script>
+<script type='text/javascript' src='http://visolutions.com.br/wp-content/themes/disillusion/js/main.js'></script>
+<script type='text/javascript' src='http://visolutions.com.br/wp-content/themes/disillusion/plugins/js_composer/assets/js_composer_front.js?ver=3.5.4'></script>
+</body>
+</html>
+<!-- Dynamic page generated in 4.694 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2014-08-09 16:09:30 -->
+
+<!-- Super Cache dynamic page detected but late init not set. See the readme.txt for further details. -->
+<!-- Dynamic Super Cache -->
