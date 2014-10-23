@@ -16,4 +16,7 @@
 8 - gitk - abre programa para ver os commit de forma visual
 9 - git reset HEAD nome.html = leva o arquivo da stage area para work area.
 10 - git rm nome.txt = remove arquivo 
+11 - git tag = exibe as tags crias
+     - git tag -a codigodocommit -m "Descricao" = definindo uma tag para commit ja realizado
+	 - git tag -a v1.0 -m "comentario" = criando uma tag sem vinculacao
    
