@@ -30,6 +30,8 @@
 	 - git -d teste = deleta o brach
 13 - git merge teste = junta os branches - estar no branch destino
 
+14 - Github
+
 criar arquivo
 .gitignore 
 nomes dos arquivos ignorados
@@ -47,3 +49,7 @@ Using Chocolatey:
 cinst nodejs
 # or for full install with npm
 cinst nodejs.install
+
+
+
+aaaaaaaaaa
